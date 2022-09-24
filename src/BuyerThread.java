@@ -1,15 +1,15 @@
 public class BuyerThread extends Thread {
-
-    private final int idBayer;
-
     private Store store;
 
-    BuyerThread(Store store, int idBayer) {
+    BuyerThread(Store store) {
         this.store = store;
-        this.idBayer = idBayer;
     }
 
     public void run() {
-        store.get(idBayer);
+        for (int i = 1; i < 5; i++) {
+            System.out.println("Покупатель " +  i + " зашел в автосалон");
+            int buyer = i;
+            store.get(buyer);
+        }
     }
 }

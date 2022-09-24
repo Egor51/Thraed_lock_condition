@@ -4,9 +4,10 @@ public class DeveloperThread extends Thread {
     private static final int COUNT_CAR = 6;
 
     private Store store;
-    //ReentrantLock locker;
+
 
     DeveloperThread(Store store) {
+
         this.store = store;
     }
 
